@@ -24,7 +24,7 @@ bot = commands.Bot(command_prefix="ocean!")  # Dein Prefix
 @bot.event
 async def on_ready():
     bot.loop.create_task(stats_task())
-    bot.loop.create_task(status_task2())
+
 
 
 async def stats_task():
@@ -42,16 +42,7 @@ async def stats_task():
         await message.edit(embed=embed)
         await asyncio.sleep(600)  # = 10 Minuten
 
-async def status_task2():
-    colors = [discord.Colour.red(), discord.Colour.orange(), discord.Colour.gold(), discord.Colour.green(),
-              discord.Colour.blue(), discord.Colour.purple()]
-    while True:
-        await client.change_presence(activity=discord.Game('Ersteller Canned Heat'), status=discord.Status.online)
-        await asyncio.sleep(5)
-        # await client.change_presence(activity=discord.Game('Mein cooler Bot!'), status=discord.Status.online)
-        # await asyncio.sleep(5)
-        await client.change_presence(activity=discord.Game('Aktualisiert die Stats'), status=discord.Status.online)
-        await asyncio.sleep(5)
+
 
 #bot.run(TOKEN)
 client.run(os.getenv('Token'))
