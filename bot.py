@@ -3,7 +3,7 @@ import discord
 from datetime import datetime
 import asyncio
 import os
-TOKEN = ""  # Dein Token
+
 
 bot = commands.Bot(command_prefix="ocean!")  # Dein Prefix
 
