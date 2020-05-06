@@ -43,4 +43,4 @@ async def stats_task():
 
 
 #bot.run(TOKEN)
-client.run(os.getenv('Token'))
+client.run(os.getenv(Token))
