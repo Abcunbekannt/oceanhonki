@@ -5,8 +5,6 @@ import asyncio
 import os
 
 
-bot = commands.Bot(command_prefix="ocean!")  # Dein Prefix
-
 
 
 
